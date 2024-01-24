@@ -1,0 +1,73 @@
+V "GNAT Lib v10"
+M P W=b
+P ZX
+
+RN
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTIONS
+RV NO_IO
+RV SPARK_05
+
+U test_date%b		test_date.adb		195b6f07 NE OO SU
+W ada%s			ada.ads			ada.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W test_package%s	test_package.adb	test_package.ali
+
+D ada.ads		20230707070819 76789da1 ada%s
+D a-except.ads		20230707070819 a7106115 ada.exceptions%s
+D a-ioexce.ads		20230707070819 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20230707070819 119b8fb3 ada.streams%s
+D a-tags.ads		20230707070819 491b781d ada.tags%s
+D a-textio.ads		20230707070819 aef4d56d ada.text_io%s
+D a-unccon.ads		20230707070819 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20230707070819 5ab55268 interfaces%s
+D i-cstrea.ads		20230707070819 e53d8b8e interfaces.c_streams%s
+D system.ads		20230707070819 4635ec04 system%s
+D s-crtl.ads		20230707070819 0ebbdb71 system.crtl%s
+D s-exctab.ads		20230707070819 54135002 system.exception_table%s
+D s-ficobl.ads		20230707070819 078245e4 system.file_control_block%s
+D s-parame.ads		20230707070819 48ec542b system.parameters%s
+D s-secsta.ads		20230707070819 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20230707070819 a7318a92 system.soft_links%s
+D s-stache.ads		20230707070819 a37c21ec system.stack_checking%s
+D s-stalib.ads		20230707070819 09bd3940 system.standard_library%s
+D s-stoele.ads		20230707070819 2dc34a04 system.storage_elements%s
+D s-traent.ads		20230707070819 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20230707070819 34867c83 system.unsigned_types%s
+D s-wchcon.ads		20230707070819 1b7d22d2 system.wch_con%s
+D test_date.adb		20231101195654 b3dbee6f test_date%b
+D test_package.ads	20231102154511 04745405 test_package%s
+G a e
+G c Z b b [test_date standard 4 11 none]
+G r c none [test_date standard 4 11 none] [get test_package 11 14 none]
+G r c none [test_date standard 4 11 none] [put test_package 12 14 none]
+G r c none [test_date standard 4 11 none] [next_date test_package 14 13 none]
+G r c none [test_date standard 4 11 none] [previous_date test_package 15 13 none]
+G r c none [test_date standard 4 11 none] [Ogt test_package 16 13 none]
+G r c none [test_date standard 4 11 none] [Olt test_package 17 13 none]
+X 1 ada.ads
+16K9*Ada 20e8 23|2r6 2r23
+X 6 a-textio.ads
+57K13*Text_IO 727e16 23|2w10 2r27
+264U14*New_Line 23|14s4 18s4 22s4
+465U14*Put 23|9s4 12s4 16s4 20s4 24s4 27s4 34s4 41s4 50s7 52s7 54s7 56s7
+508U14*Put_Line 23|29s7 31s7 36s7 38s7 43s7 45s7
+X 23 test_date.adb
+4U11*Test_Date 4b11 57l5 57t14
+6r4 Date_1{24|9R9} 10m8 13r8 17r18 21r22 28r7 35r7 42r7
+6r12 Date_2{24|9R9} 25m8 28r16 35r16 42r16
+X 24 test_package.ads
+1K9*Test_Package 23|3w6 3r24 24|27e17
+4X4*Format_Error 23|49r9
+5X4*Year_Error 23|51r9
+6X4*Month_Error 23|53r9
+7X4*Day_Error 23|55r9
+9R9*Date_Type 23|6r20 24|24e17
+11U14*Get 23|10s4 25s4
+12U14*Put 23|13s4 17s4 21s4
+14V13*Next_Date{9R9} 23|17s8
+15V13*Previous_Date{9R9} 23|21s8
+16V14*">"{boolean} 23|28s14
+17V14*"<"{boolean} 23|35s14
+

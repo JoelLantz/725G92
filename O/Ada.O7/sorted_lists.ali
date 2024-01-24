@@ -1,0 +1,132 @@
+V "GNAT Lib v10"
+P ZX
+
+RN
+RV NO_ALLOCATORS
+RV NO_EXCEPTIONS
+RV NO_IO
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_LOCAL_ALLOCATORS
+RV NO_RECURSION
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_UNCHECKED_DEALLOCATION
+RV NO_DEFAULT_INITIALIZATION
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U sorted_lists%b	sorted_lists.adb	a785cbcc NE OO PK
+W ada%s			ada.ads			ada.ali
+Z ada.exceptions%s	a-except.adb		a-except.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W ada.unchecked_deallocation%s
+Z system.pool_global%s	s-pooglo.adb		s-pooglo.ali
+
+U sorted_lists%s	sorted_lists.ads	920dd61c EE OO PK
+Z ada.tags%s		a-tags.adb		a-tags.ali
+Z system%s		system.ads		system.ali
+Z system.exception_table%s  s-exctab.adb	s-exctab.ali
+Z system.finalization_masters%s  s-finmas.adb	s-finmas.ali
+Z system.pool_global%s	s-pooglo.adb		s-pooglo.ali
+Z system.soft_links%s	s-soflin.adb		s-soflin.ali
+Z system.standard_library%s  s-stalib.adb	s-stalib.ali
+
+D ada.ads		20230707070819 76789da1 ada%s
+D a-except.ads		20230707070819 a7106115 ada.exceptions%s
+D a-finali.ads		20230707070819 bf4f806b ada.finalization%s
+D a-inteio.ads		20230707070819 f64b89a4 ada.integer_text_io%s
+D a-ioexce.ads		20230707070819 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20230707070819 119b8fb3 ada.streams%s
+D a-tags.ads		20230707070819 491b781d ada.tags%s
+D a-textio.ads		20230707070819 aef4d56d ada.text_io%s
+D a-tiinio.ads		20230707070819 390edddb ada.text_io.integer_io%s
+D a-unccon.ads		20230707070819 0e9b276f ada.unchecked_conversion%s
+D a-uncdea.ads		20230707070819 eff36322 ada.unchecked_deallocation%s
+D interfac.ads		20230707070819 5ab55268 interfaces%s
+D i-cstrea.ads		20230707070819 e53d8b8e interfaces.c_streams%s
+D sorted_lists.ads	20231116191418 920dd61c sorted_lists%s
+D sorted_lists.adb	20231117200847 82c4223b sorted_lists%b
+D system.ads		20230707070819 4635ec04 system%s
+D s-crtl.ads		20230707070819 0ebbdb71 system.crtl%s
+D s-exctab.ads		20230707070819 54135002 system.exception_table%s
+D s-ficobl.ads		20230707070819 078245e4 system.file_control_block%s
+D s-finmas.ads		20230707070819 7811a767 system.finalization_masters%s
+D s-finroo.ads		20230707070819 4ff27390 system.finalization_root%s
+D s-memory.ads		20230707070819 597d6634 system.memory%s
+D s-parame.ads		20230707070819 48ec542b system.parameters%s
+D s-pooglo.ads		20230707070819 ede33ef8 system.pool_global%s
+D s-secsta.ads		20230707070819 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20230707070819 a7318a92 system.soft_links%s
+D s-stache.ads		20230707070819 a37c21ec system.stack_checking%s
+D s-stalib.ads		20230707070819 09bd3940 system.standard_library%s
+D s-stalib.adb		20230707070819 f2fe2716 system.standard_library%b
+D s-stoele.ads		20230707070819 2dc34a04 system.storage_elements%s
+D s-stopoo.ads		20230707070819 b16154c2 system.storage_pools%s
+D s-traent.ads		20230707070819 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20230707070819 34867c83 system.unsigned_types%s
+D s-wchcon.ads		20230707070819 1b7d22d2 system.wch_con%s
+G a e
+G c Z s b [empty sorted_lists 6 13 none]
+G c Z s b [insert sorted_lists 8 14 none]
+G c Z s b [put sorted_lists 10 14 none]
+G c Z s b [member sorted_lists 11 13 none]
+G c Z s b [length sorted_lists 14 13 none]
+G c Z s b [delete sorted_lists 16 14 none]
+G c Z s b [remove sorted_lists 17 14 none]
+G c Z b b [data_typeIP sorted_lists 8 9 none]
+G c Z b b [free sorted_lists 14 14 none]
+X 1 ada.ads
+16K9*Ada 20e8 15|1r6 2r6 2r31 3r6 3r31 15r11
+X 4 a-inteio.ads
+18K13*Integer_Text_IO[9|46] 15|3w10 3r35
+X 8 a-textio.ads
+57K13*Text_IO 727e16 15|2w10 2r35
+86I12*Field{integer}
+465U14*Put 15|70s10
+X 9 a-tiinio.ads
+80U14*Put 15|71s10[4|18]
+82i7 Width{8|86I12} 15|71r25[4|18]
+X 11 a-uncdea.ads
+20u15*Unchecked_Deallocation 15|1w10 15r15
+X 14 sorted_lists.ads
+1K9*Sorted_Lists 24E9 28l5 28e17 15|5b14 132l5 132t17
+4P9*List_Type 6r29 8r35 10r28 11r30 14r30 16r35 17r35 25c9 15|11r17 15r49
+. 19r29 40r35 42r18 43r19 67r28 78r30 94r30 105r35 116r35 118r18
+6V13*Empty{boolean} 6>19 15|19b13 22l8 22t13 45s10 69s14 81s10 108s14 120s10
+6p19 List{4P9} 15|19b19 21r14
+8U14*Insert 8=21 9>21 15|40b14 55s10 61s10 64l8 64t14
+8p21 List{4P9} 15|40b21 45r16 48m10 49r13 52r23 54m10 55r17 56r13 59m10 60r13
+. 61r17
+9i21 Value{integer} 15|41b21 47r27 49r25 53r27 56r25 58r27 60r26 61r28
+10U14*Put 10>18 15|67b14 72s10 75l8 75t11
+10p18 List{4P9} 15|67b18 69r20 71r14 72r14
+11V13*Member{boolean} 11>20 12>20 15|78b13 87s17 90l8 90t14
+11p20 List{4P9} 15|78b20 81r16 83r13 87r24
+12i20 Nyckeltal{integer} 15|79b20 83r25 87r35
+14V13*Length{natural} 14>20 15|94b13 100s21 103l8 103t14
+14p20 List{4P9} 15|94b20 97r10 100r28
+16U14*Delete 16=21 15|105b14 109s10 113l8 113t14
+16p21 List{4P9} 15|105b21 108r20 109r17 110m15
+17U14*Remove 17=21 18>21 15|116b14 127s10 130l8 130t14
+17p21 List{4P9} 15|116b21 120r16 122r13 123r22 124m15 125m10 127r17
+18i21 Value{integer} 15|117b21 122r25 127r28
+20X4*No_Such_Element_Error 15|121r16
+24R9 Data_Type 26r13 15|8c9 12e17 15r38 46r26 50r26 51r27 57r26
+X 15 sorted_lists.adb
+10i10*Data{integer} 47m19 49r18 53m19 55r38 56r18 58m19 60r18 71r19 83r18
+. 122r18
+11p10*Next{14|4P9} 55m22 61m22 72r19 87r29 100r33 109m22 123r27 127m22
+14U14 Free[11|20] 110s10 124s10
+42p7 TempList{14|4P9} 46m10 47r10 48r18 50m10 53r10 54r18 57m10 58r10 59r18
+43p7 TempList2{14|4P9} 51m10 52m10 55r28
+118p7 TempList{14|4P9} 123m10 125r18
+X 16 system.ads
+67M9*Address
+X 22 s-memory.ads
+53V13*Alloc{16|67M9} 103i<c,__gnat_malloc>22
+68U14*Free 104i<c,__gnat_free>22
+76V13*Realloc{16|67M9} 105i<c,__gnat_realloc>22
+X 29 s-stalib.adb
+93U14 Break_Start 94i<c,__gnat_break_start>22
+

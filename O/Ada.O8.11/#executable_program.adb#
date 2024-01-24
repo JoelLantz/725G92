@@ -1,0 +1,157 @@
+-- joela064: Samarbetat med isahe131, Isaac Hedman, samma program
+with Ada.Command_Line;    use Ada.Command_Line;
+with Ada.Text_IO;         use Ada.Text_IO;
+with Ada.Integer_Text_IO; use  Ada.Integer_Text_IO;
+with Image_Handling;      use  Image_Handling;
+
+procedure Executable_Program is
+   
+   Output_Error  : exception;
+   Input_Error   : exception;
+   Input_Output_Error : exception;
+   Duplicate_Error : exception;
+   
+   function Punkt1(Item1, Item2 : in String) return Boolean is
+      
+   begin
+      
+      if Item1 = Item2 then
+	 return True;
+      elsif "./" & Item1 = Item2 then
+	 return True;
+      elsif Item1 = "./" & Item2 then
+	 return True;
+      end if;
+      return False;
+      
+   end Punkt1;
+   
+   procedure Upg2(Arg1, Arg2 : in String) is
+      
+   begin
+      
+      if Argument_Count = 1 then	 
+	 if Arg1 = Command_Name or Punkt1(Arg1, Command_Name) then
+	    raise Input_Error;
+	 end if;	 
+      else	    
+	 if Arg2 = Command_Name or Punkt1(Arg2, Command_Name)then
+	    raise Output_Error;
+	 elsif Arg1 = Arg2 or Punkt1(Arg1, Arg2) then
+	    raise Input_Output_Error;
+	 end if;
+      end if;
+      
+   end Upg2;
+   
+   function Exist(Arg: in String) return Boolean is
+      F : File_Type;
+   begin
+      
+      Open(F, In_File, Arg);
+      Close(F);
+      
+      return True;
+      
+   exception           
+      when Name_Error => 
+	 return False;
+   end Exist;
+   
+   --Använder Exist för att se om det blir Name_Error
+   procedure RaiseDuplicate(Arg : in String) is
+   begin
+      
+      if Exist(Arg) then
+	 raise Duplicate_Error;
+      end if;
+      
+   end RaiseDuplicate;
+   
+   --Använder för RaiseDuplicate för att se om filnamnet redan finns
+   procedure TestCreate(Arg2 : in String) is
+      F2 : File_Type;
+   begin
+      
+      RaiseDuplicate(Arg2);
+      
+      Create(F2, Out_File, Arg2);
+      Close(F2);
+      
+   end TestCreate;
+   
+   procedure Upg3(Arg1, Arg2 : in String) is
+      
+      F1 : File_Type;
+   begin
+      
+      Open(F1, In_File, Arg1);
+      TestCreate(Arg2);
+      Close(F1);
+      
+   end Upg3;
+   
+   procedure Gemensam(Arg1 : in String) is
+      
+   begin
+      if Arg1 = Command_Name or Punkt1(Arg1, Command_Name) then
+	 raise Input_Error;
+      end if;
+   end Gemensam;
+   
+   procedure TwoArguments(Arg1, Arg2 : in String) is
+      
+   begin
+      
+      Gemensam(Arg1);
+      if Command_Name = Arg2 or Punkt1(Command_Name, Arg2) then
+	 raise Output_Error;
+      elsif Arg1 = Arg2 or Punkt1(Arg1, Arg2) then
+	 raise Input_Output_Error;
+      end if;      
+      Upg3(Arg1, Arg2);
+      
+   end TwoArguments;
+   
+   procedure OneArgument(Arg1 : in String) is
+      
+   begin      
+      Gemensam(Arg1);
+      if not Exist(Arg1) then
+	 raise Name_Error;
+      end if;  
+      
+   end OneArgument;
+   
+   Image : Image_Type; 
+   F : File_Type;
+   
+begin
+   
+   if Argument_Count = 2 then
+      TwoArguments(Argument(1), Argument(2));
+      Read(Argument(1), Image);
+      Open(F, Out_File, Argument(2));
+      Print_Image_Information(F, Image);	  
+   elsif Argument_Count = 1 then
+      OneArgument(Argument(1));
+      Read(Argument(1), Image);
+      Print_Image_Information(Image);
+   else
+      Put_Line("Error! Incorrect number of arguments!");
+      Put("Usage: ./executable_program IMAGE_FILENAME [OUTPUT_FILENAME]");
+   end if;
+   
+exception
+   when Output_Error =>
+      Put("Error! Output file """ & Argument(2) & """ cannot be same as the program itself!");
+   when Input_Error =>
+      Put("Error! Input file """ & Argument(1) & """ cannot be same as the program itself!");
+   when Input_Output_Error =>
+      Put("Error! Output file """ & Argument(2) & """ cannot be same as input file!");
+   when Name_Error =>
+      Put("Error! Input file """ & Argument(1) & """ does not exist!");
+   when Duplicate_Error =>
+      Put("Error! Output file """ & Argument(2) & """ already exists!");
+      
+end Executable_Program;

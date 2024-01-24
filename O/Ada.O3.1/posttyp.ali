@@ -1,0 +1,111 @@
+V "GNAT Lib v10"
+M P W=b
+P ZX
+
+RN
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_FLOATING_POINT
+RV NO_IO
+RV SPARK_05
+
+U posttyp%b		posttyp.adb		cb8d905f NE OO SU
+W ada%s			ada.ads			ada.ali
+W ada.float_text_io%s	a-flteio.ads		a-flteio.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+Z system.img_bool%s	s-imgboo.adb		s-imgboo.ali
+
+D ada.ads		20230707070819 76789da1 ada%s
+D a-except.ads		20230707070819 a7106115 ada.exceptions%s
+D a-flteio.ads		20230707070819 e18a47a0 ada.float_text_io%s
+D a-inteio.ads		20230707070819 f64b89a4 ada.integer_text_io%s
+D a-ioexce.ads		20230707070819 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20230707070819 119b8fb3 ada.streams%s
+D a-tags.ads		20230707070819 491b781d ada.tags%s
+D a-textio.ads		20230707070819 aef4d56d ada.text_io%s
+D a-tiflio.ads		20230707070819 bf196650 ada.text_io.float_io%s
+D a-tiinio.ads		20230707070819 390edddb ada.text_io.integer_io%s
+D a-unccon.ads		20230707070819 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20230707070819 5ab55268 interfaces%s
+D i-cstrea.ads		20230707070819 e53d8b8e interfaces.c_streams%s
+D posttyp.adb		20230929200840 72b88b36 posttyp%b
+D system.ads		20230707070819 4635ec04 system%s
+D s-crtl.ads		20230707070819 0ebbdb71 system.crtl%s
+D s-exctab.ads		20230707070819 54135002 system.exception_table%s
+D s-ficobl.ads		20230707070819 078245e4 system.file_control_block%s
+D s-imgboo.ads		20230707070819 f5d971eb system.img_bool%s
+D s-parame.ads		20230707070819 48ec542b system.parameters%s
+D s-secsta.ads		20230707070819 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20230707070819 a7318a92 system.soft_links%s
+D s-stache.ads		20230707070819 a37c21ec system.stack_checking%s
+D s-stalib.ads		20230707070819 09bd3940 system.standard_library%s
+D s-stoele.ads		20230707070819 2dc34a04 system.storage_elements%s
+D s-traent.ads		20230707070819 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20230707070819 34867c83 system.unsigned_types%s
+D s-wchcon.ads		20230707070819 1b7d22d2 system.wch_con%s
+G a e
+G c Z b b [posttyp standard 5 11 none]
+X 1 ada.ads
+16K9*Ada 20e8 14|1r6 1r23 2r6 2r31 3r6 3r29
+X 3 a-flteio.ads
+20K13*Float_Text_IO[9|46] 14|3w10 3r33
+X 4 a-inteio.ads
+18K13*Integer_Text_IO[10|46] 14|2w10 2r35
+X 8 a-textio.ads
+57K13*Text_IO 727e16 14|1w10 1r27
+86I12*Field{integer}
+264U14*New_Line 14|137s4 143s4
+381U14*Get 14|50s7 51s7 60s7 62s7 64s7 72s7 73s7 74s7 75s7 76s7 77s7 78s7
+. 79s7 80s7 86s7 87s7
+392U14*Put 14|94s7 115s7 117s7 119s7 121s7 125s7
+454U14*Get 14|52s7 61s7 65s7
+465U14*Put 14|95s7 96s7 104s7 105s7 106s7 108s7 109s7 116s7 118s7 120s7 122s7
+. 123s7 124s7 133s4 135s4 139s4 141s4 145s4 147s4
+508U14*Put_Line 14|132s4 138s4 144s4
+X 9 a-tiflio.ads
+60U14*Get 14|59s7[3|20] 63s7[3|20]
+82U14*Put 14|103s7[3|20] 107s7[3|20]
+84i7 Fore{8|86I12} 14|103r21[3|20] 107r21[3|20]
+85i7 Aft{8|86I12} 14|103r32[3|20] 107r32[3|20]
+86i7 Exp{8|86I12} 14|103r42[3|20] 107r42[3|20]
+X 14 posttyp.adb
+5U11*Posttyp 5b11 150l5 150t12
+8R9 DS1 12e17 47r29 92r28 128r9
+10e10 W{character} 50m16 94r16
+11a10 P{string} 52m16 96r16
+15R9 DS2_Type 19e17 23r14 24r14
+17f10 S{float} 59m18 63m18 103r18 107r18
+18a10 Z{string} 61m18 65m18 105r18 109r18
+21R9 DS2 25e17 56r29 101r28 129r10
+23r10 D{15R9} 59m16 61m16 103r16 105r16
+24r10 U{15R9} 63m16 65m16 107r16 109r16
+28R9 DS3_Type 31e17 41r17
+30e10 Y{character} 72m18 76m18 115r18 119r18
+30e13 Q{character} 74m18 78m18 117r18 121r18
+33R9 DS3_Type2 37e17 42r14
+35b10 T{boolean} 82m17 84m17 123r18
+36e10 L{character} 87m18 125r18
+39R9 DS3 43e17 69r29 113r28 130r11
+41r10 J{28R9} 72m16 74m16 115r16 117r16
+41r13 B{28R9} 76m16 78m16 119r16 121r16
+42r10 O{33R9} 82m15 84m15 87m16 123r16 125r16
+47U14 Get 47b14 47<18 53l8 53t11 134s4
+47r18 Item{8R9} 50m11 50r11 52m11 52r11
+48e7 C{character} 51m11
+56U14 Get 56b14 56<18 66l8 66t11 140s4
+56r18 Item{21R9} 59m11 59r11 61m11 61r11 63m11 63r11 65m11 65r11
+57e7 C{character} 60m11 62m11 64m11
+69U14 Get 69b14 69<18 88l8 88t11 146s4
+69r18 Item{39R9} 72m11 72r11 74m11 74r11 76m11 76r11 78m11 78r11 82m10 84m10
+. 87m11 87r11
+70e7 C{character} 73m11 75m11 77m11 79m11 80m11 81r10 81r21 86m11
+92U14 Put 92b14 92>18 97l8 97t11 136s4
+92r18 Item{8R9} 94r11 96r11
+101U14 Put 101b14 101>18 110l8 110t11 142s4
+101r18 Item{21R9} 103r11 105r11 107r11 109r11
+113U14 Put 113b14 113>18 126l10 126t13 148s4
+113r18 Item{39R9} 115r11 117r11 119r11 121r11 123r11 125r11
+128r4 DS{8R9} 134m8 136r8
+129r4 DSS{21R9} 140m8 142r8
+130r4 DSSS{39R9} 146m8 148r8
+

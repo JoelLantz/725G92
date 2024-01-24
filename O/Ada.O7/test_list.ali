@@ -1,0 +1,90 @@
+V "GNAT Lib v10"
+M P W=b
+P ZX
+
+RN
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTIONS
+RV NO_IO
+RV NO_DEFAULT_INITIALIZATION
+RV SPARK_05
+
+U test_list%b		test_list.adb		04829339 NE OO SU
+W ada%s			ada.ads			ada.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W sorted_lists%s	sorted_lists.adb	sorted_lists.ali
+
+D ada.ads		20230707070819 76789da1 ada%s
+D a-except.ads		20230707070819 a7106115 ada.exceptions%s
+D a-finali.ads		20230707070819 bf4f806b ada.finalization%s
+D a-inteio.ads		20230707070819 f64b89a4 ada.integer_text_io%s
+D a-ioexce.ads		20230707070819 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20230707070819 119b8fb3 ada.streams%s
+D a-tags.ads		20230707070819 491b781d ada.tags%s
+D a-textio.ads		20230707070819 aef4d56d ada.text_io%s
+D a-tiinio.ads		20230707070819 390edddb ada.text_io.integer_io%s
+D a-unccon.ads		20230707070819 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20230707070819 5ab55268 interfaces%s
+D i-cstrea.ads		20230707070819 e53d8b8e interfaces.c_streams%s
+D sorted_lists.ads	20231116191418 920dd61c sorted_lists%s
+D system.ads		20230707070819 4635ec04 system%s
+D s-crtl.ads		20230707070819 0ebbdb71 system.crtl%s
+D s-exctab.ads		20230707070819 54135002 system.exception_table%s
+D s-ficobl.ads		20230707070819 078245e4 system.file_control_block%s
+D s-finmas.ads		20230707070819 7811a767 system.finalization_masters%s
+D s-finroo.ads		20230707070819 4ff27390 system.finalization_root%s
+D s-parame.ads		20230707070819 48ec542b system.parameters%s
+D s-pooglo.ads		20230707070819 ede33ef8 system.pool_global%s
+D s-secsta.ads		20230707070819 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20230707070819 a7318a92 system.soft_links%s
+D s-stache.ads		20230707070819 a37c21ec system.stack_checking%s
+D s-stalib.ads		20230707070819 09bd3940 system.standard_library%s
+D s-stoele.ads		20230707070819 2dc34a04 system.storage_elements%s
+D s-stopoo.ads		20230707070819 b16154c2 system.storage_pools%s
+D s-traent.ads		20230707070819 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20230707070819 34867c83 system.unsigned_types%s
+D s-wchcon.ads		20230707070819 1b7d22d2 system.wch_con%s
+D test_list.adb		20231115171802 ce3019ec test_list%b
+G a e
+G c Z b b [test_list standard 6 11 none]
+G r c none [test_list standard 6 11 none] [insert sorted_lists 8 14 none]
+G r c none [test_list standard 6 11 none] [put sorted_lists 10 14 none]
+G r c none [test_list standard 6 11 none] [empty sorted_lists 6 13 none]
+G r c none [test_list standard 6 11 none] [member sorted_lists 11 13 none]
+G r c none [test_list standard 6 11 none] [remove sorted_lists 17 14 none]
+G r c none [test_list standard 6 11 none] [length sorted_lists 14 13 none]
+G r c none [test_list standard 6 11 none] [delete sorted_lists 16 14 none]
+X 1 ada.ads
+16K9*Ada 20e8 31|2r6 2r31 3r6 3r31
+X 4 a-inteio.ads
+18K13*Integer_Text_IO[9|46] 31|3w10 3r35
+X 8 a-textio.ads
+57K13*Text_IO 727e16 31|2w10 2r35
+86I12*Field{integer}
+264U14*New_Line 31|19s4 51s4 62s4
+465U14*Put 31|10s4 17s4 20s4 22s7 26s4 28s4 30s7 32s4 36s4 38s4 40s7 42s4
+. 46s4 49s4 53s4 60s4 64s4 70s7
+508U14*Put_Line 31|24s4 34s4 44s4 55s4 57s4 66s4
+X 9 a-tiinio.ads
+59U14*Get 31|12s7[4|18] 27s4[4|18] 37s4[4|18] 47s4[4|18]
+80U14*Put 31|33s4[4|18] 43s4[4|18] 54s4[4|18] 65s4[4|18]
+82i7 Width{8|86I12} 31|33r15[4|18] 43r15[4|18] 54r22[4|18] 65r22[4|18]
+X 13 sorted_lists.ads
+1K9*Sorted_Lists 28e17 31|4w6 4r31
+4P9*List_Type 31|8r10
+6V13*Empty{boolean} 31|21s11
+8U14*Insert 31|14s7
+10U14*Put 31|18s4 50s4 61s4
+11V13*Member{boolean} 31|29s11 39s11
+14V13*Length{natural} 31|54s8 65s8
+16U14*Delete 31|58s4
+17U14*Remove 31|48s4
+20X4*No_Such_Element_Error 31|69r9
+X 31 test_list.adb
+6U11*Test_List 6b11 71l5 71t14
+7i4 Value{integer} 12m11 13r17 14r20 27m8 29r24 33r8 37m8 39r24 43r8 47m8
+. 48r17
+8p4 List{13|4P9} 14m14 14r14 18r8 21r17 29r18 39r18 48m11 48r11 50r8 54r15
+. 58m11 58r11 61r8 65r15
+

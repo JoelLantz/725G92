@@ -1,0 +1,129 @@
+V "GNAT Lib v10"
+M P W=b
+P SS ZX
+
+RN
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTIONS
+RV NO_IO
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DEFAULT_INITIALIZATION
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV SPARK_05
+
+U executable_program%b	executable_program.adb	cfe034d8 NE OO SU
+W ada%s			ada.ads			ada.ali
+W ada.command_line%s	a-comlin.adb		a-comlin.ali
+Z ada.exceptions%s	a-except.adb		a-except.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W image_handling%s	image_handling.adb	image_handling.ali
+Z system%s		system.ads		system.ali
+Z system.concat_2%s	s-conca2.adb		s-conca2.ali
+Z system.concat_3%s	s-conca3.adb		s-conca3.ali
+Z system.exception_table%s  s-exctab.adb	s-exctab.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+Z system.standard_library%s  s-stalib.adb	s-stalib.ali
+
+D ada.ads		20230707070819 76789da1 ada%s
+D a-comlin.ads		20230707070819 4aa66568 ada.command_line%s
+D a-except.ads		20230707070819 a7106115 ada.exceptions%s
+D a-inteio.ads		20230707070819 f64b89a4 ada.integer_text_io%s
+D a-ioexce.ads		20230707070819 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20230707070819 119b8fb3 ada.streams%s
+D a-tags.ads		20230707070819 491b781d ada.tags%s
+D a-textio.ads		20230707070819 aef4d56d ada.text_io%s
+D a-tiinio.ads		20230707070819 390edddb ada.text_io.integer_io%s
+D a-unccon.ads		20230707070819 0e9b276f ada.unchecked_conversion%s
+D executable_program.adb  20231203171229 8183aa0c executable_program%b
+D image_handling.ads	20231204112710 5c7aa775 image_handling%s
+D interfac.ads		20230707070819 5ab55268 interfaces%s
+D i-cstrea.ads		20230707070819 e53d8b8e interfaces.c_streams%s
+D system.ads		20230707070819 4635ec04 system%s
+D s-conca2.ads		20230707070819 02a0d7d0 system.concat_2%s
+D s-conca3.ads		20230707070819 0b705ca5 system.concat_3%s
+D s-crtl.ads		20230707070819 0ebbdb71 system.crtl%s
+D s-exctab.ads		20230707070819 54135002 system.exception_table%s
+D s-ficobl.ads		20230707070819 078245e4 system.file_control_block%s
+D s-parame.ads		20230707070819 48ec542b system.parameters%s
+D s-secsta.ads		20230707070819 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20230707070819 a7318a92 system.soft_links%s
+D s-stache.ads		20230707070819 a37c21ec system.stack_checking%s
+D s-stalib.ads		20230707070819 09bd3940 system.standard_library%s
+D s-stoele.ads		20230707070819 2dc34a04 system.storage_elements%s
+D s-traent.ads		20230707070819 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20230707070819 34867c83 system.unsigned_types%s
+D s-wchcon.ads		20230707070819 1b7d22d2 system.wch_con%s
+G a e
+G c Z b b [executable_program standard 5 11 none]
+G r s image_type [executable_program standard 5 11 none] [image_typeIP image_handling 24 9 none]
+G r c none [executable_program standard 5 11 none] [read image_handling 9 14 none]
+G r c none [executable_program standard 5 11 none] [print_image_information image_handling 6 14 none]
+G r c none [executable_program standard 5 11 none] [print_image_information image_handling 7 14 none]
+X 1 ada.ads
+16K9*Ada 20e8 11|2r6 2r29 2r47 3r6 3r29 3r47
+X 2 a-comlin.ads
+36K13*Command_Line 144e21 11|2w10 3r10
+39V13*Argument_Count{natural} 11|31s10 129s7 134s10
+52V13*Argument{string} 11|130s20 130s33 131s12 132s25 135s19 136s12 145s37
+. 147s36 149s37 151s36 153s37
+62V13*Command_Name{string} 11|32s20 32s49 36s20 36s49 95s17 95s46 105s10
+. 105s40
+X 4 a-inteio.ads
+18K13*Integer_Text_IO[9|46] 11|2w51 3r51
+X 8 a-textio.ads
+57K13*Text_IO 727e16 11|2w33 3r33
+64P9*File_Type 11|46r11 71r12 83r12 125r8
+66n23*In_File{66E9} 11|49r15 86r16
+66n32*Out_File{66E9} 11|76r18 132r15
+99U14*Create 11|76s7
+114U14*Open 11|49s7 86s7 132s7
+129U14*Close 11|50s7 77s7 88s7
+465U14*Put 11|140s7 145s7 147s7 149s7 151s7 153s7
+508U14*Put_Line 11|139s7
+544X4*Name_Error 11|55r12 119r16 150r9
+X 11 executable_program.adb
+5U11*Executable_Program 5b11 155l5 155t23
+7X4 Output_Error 37r19 106r16 144r9
+8X4 Input_Error 33r19 96r16 146r9
+9X4 Input_Output_Error 39r19 108r16 148r9
+10X4 Duplicate_Error 64r16 152r9
+12V13 Punkt1{boolean} 12b13 12>20 12>27 25l8 25t14 32s36 36s36 38s31 95s33
+. 105s33 107s28
+12a20 Item1{string} 16r10 18r20 20r13
+12a27 Item2{string} 16r18 18r28 20r28
+27U14 Upg2 27b14 27>19 27>25 43l8 43t12
+27a19 Arg1{string} 32r13 32r43 38r16 38r38
+27a25 Arg2{string} 36r13 36r43 38r23 38r44
+45V13 Exist{boolean} 45b13 45>19 57l8 57t13 63s10 118s14
+45a19 Arg{string} 49r24
+46p7 F{8|64P9} 49m12 49r12 50m13 50r13
+60U14 RaiseDuplicate 60b14 60>29 67l8 67t22 74s7
+60a29 Arg{string} 63r16
+70U14 TestCreate 70b14 70>25 79l8 79t18 87s7
+70a25 Arg2{string} 74r22 76r28
+71p7 F2{8|64P9} 76m14 76r14 77m13 77r13
+81U14 Upg3 81b14 81>19 81>25 90l8 90t12 110s7
+81a19 Arg1{string} 86r25
+81a25 Arg2{string} 87r18
+83p7 F1{8|64P9} 86m12 86r12 88m13 88r13
+92U14 Gemensam 92b14 92>23 98l8 98t16 104s7 117s7
+92a23 Arg1{string} 95r10 95r40
+100U14 TwoArguments 100b14 100>27 100>33 112l8 112t20 130s7
+100a27 Arg1{string} 104r16 107r13 107r35 110r12
+100a33 Arg2{string} 105r25 105r54 107r20 107r41 110r18
+114U14 OneArgument 114b14 114>26 122l8 122t19 135s7
+114a26 Arg1{string} 117r16 118r20
+124r4 Image{12|4R10} 131m25 131r25 133r34 136m25 136r25 137r31
+125p4 F{8|64P9} 132m12 132r12 133r31
+X 12 image_handling.ads
+2K9*Image_Handling 11|2w73 3r73 12|31e19
+4R10*Image_Type 11|124r12 12|29e17
+6U14*Print_Image_Information 11|137s7
+7U14*Print_Image_Information 11|133s7
+9U14*Read 11|131s7 136s7
+

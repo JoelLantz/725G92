@@ -1,0 +1,90 @@
+V "GNAT Lib v10"
+M P W=b
+P ZX
+
+RN
+RV NO_FLOATING_POINT
+RV NO_IO
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV SPARK_05
+
+U dugga%b		dugga.adb		74e90e57 NE OO SU
+W ada%s			ada.ads			ada.ali
+W ada.float_text_io%s	a-flteio.ads		a-flteio.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+Z system.concat_5%s	s-conca5.adb		s-conca5.ali
+Z system.fat_flt%s	s-fatflt.ads		s-fatflt.ali
+Z system.val_real%s	s-valrea.adb		s-valrea.ali
+
+D ada.ads		20230707070819 76789da1 ada%s
+D a-except.ads		20230707070819 a7106115 ada.exceptions%s
+D a-flteio.ads		20230707070819 e18a47a0 ada.float_text_io%s
+D a-inteio.ads		20230707070819 f64b89a4 ada.integer_text_io%s
+D a-ioexce.ads		20230707070819 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20230707070819 119b8fb3 ada.streams%s
+D a-tags.ads		20230707070819 491b781d ada.tags%s
+D a-textio.ads		20230707070819 aef4d56d ada.text_io%s
+D a-tiflio.ads		20230707070819 bf196650 ada.text_io.float_io%s
+D a-tiinio.ads		20230707070819 390edddb ada.text_io.integer_io%s
+D a-unccon.ads		20230707070819 0e9b276f ada.unchecked_conversion%s
+D dugga.adb		20231017074456 cddc153e dugga%b
+D interfac.ads		20230707070819 5ab55268 interfaces%s
+D i-cstrea.ads		20230707070819 e53d8b8e interfaces.c_streams%s
+D system.ads		20230707070819 4635ec04 system%s
+D s-conca5.ads		20230707070819 875e432e system.concat_5%s
+D s-crtl.ads		20230707070819 0ebbdb71 system.crtl%s
+D s-exctab.ads		20230707070819 54135002 system.exception_table%s
+D s-fatflt.ads		20230707070819 11beb392 system.fat_flt%s
+D s-fatgen.ads		20230707070819 49cbaf86 system.fat_gen%s
+D s-ficobl.ads		20230707070819 078245e4 system.file_control_block%s
+D s-parame.ads		20230707070819 48ec542b system.parameters%s
+D s-secsta.ads		20230707070819 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20230707070819 a7318a92 system.soft_links%s
+D s-stache.ads		20230707070819 a37c21ec system.stack_checking%s
+D s-stalib.ads		20230707070819 09bd3940 system.standard_library%s
+D s-stoele.ads		20230707070819 2dc34a04 system.storage_elements%s
+D s-traent.ads		20230707070819 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20230707070819 34867c83 system.unsigned_types%s
+D s-valrea.ads		20230707070819 0e7fecd5 system.val_real%s
+D s-wchcon.ads		20230707070819 1b7d22d2 system.wch_con%s
+G a e
+G c Z b b [dugga standard 5 11 none]
+X 1 ada.ads
+16K9*Ada 20e8 12|1r6 1r23 2r6 2r31 3r6 3r29
+X 3 a-flteio.ads
+20K13*Float_Text_IO[9|46] 12|3w10 3r33
+X 4 a-inteio.ads
+18K13*Integer_Text_IO[10|46] 12|2w10 2r35
+X 8 a-textio.ads
+57K13*Text_IO 727e16 12|1w10 1r27
+86I12*Field{integer}
+264U14*New_Line 12|45s4 56s4
+273U14*Skip_Line 12|44s4 55s4 65s4
+381U14*Get 12|60s4
+454U14*Get 12|41s4 62s4
+465U14*Put 12|40s4 42s4 48s4 50s4 52s4 59s4 61s4 63s4
+X 9 a-tiflio.ads
+60U14*Get 12|49s4[3|20]
+82U14*Put 12|43s4[3|20] 51s4[3|20] 54s4[3|20]
+84i7 Fore{8|86I12} 12|43r16[3|20] 51r11[3|20] 54r11[3|20]
+85i7 Aft{8|86I12} 12|43r27[3|20] 51r22[3|20] 54r22[3|20]
+86i7 Exp{8|86I12} 12|43r37[3|20] 51r32[3|20] 54r32[3|20]
+X 10 a-tiinio.ads
+80U14*Put 12|64s4[4|18]
+82i7 Width{8|86I12} 12|64r13[4|18]
+X 12 dugga.adb
+5U11*Dugga 5b11 66l5 66t10
+9V13 UP1{float} 9b13 9>17 14l8 14t11 43s8
+9a17 S{string} 13r41 13r56
+17U14 UP2 17b14 17>18 18<18 23l8 23t11 53s4
+17f18 F1{float} 21r14
+18f18 F2{float} 21m7 22m7 22r27
+26V14 "-"{integer} 26b14 26>17 27>17 32l9 32t11 64s9
+26e17 Left{character} 31r54
+27a17 Right{string} 31r94
+34f4 F{float} 49m8 51r8 53r8 53m11 54r8
+35a4 S{string} 41m8 43r12 62m8 63r61 64r10
+36e4 C{character} 60m8 63r47 64r8
+

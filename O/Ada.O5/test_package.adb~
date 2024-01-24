@@ -1,0 +1,350 @@
+with Ada.Text_IO;         use Ada.Text_IO;
+with Ada.Integer_Text_IO; use Ada.Integer_Text_IO;
+
+package body Test_Package is
+   
+   Length_Error : exception;
+   
+   Months : constant array(1..12) of Integer := 
+     (1 =>  31,
+      2 =>  28,
+      3 =>  31,
+      4 =>  30,
+      5 =>  31,
+      6 =>  30,
+      7 =>  31,
+      8 =>  31,
+      9 =>  30,
+      10 => 31,
+      11 => 30,
+      12 => 31); 
+   
+   procedure Check_Year(Year : in Integer) is
+   begin
+      if Year < 1532 or Year > 9000 then
+	 raise Year_Error;
+      end if;
+   end;
+   
+   procedure Check_Day(Month : in Integer;
+		       Day : in Integer) is
+   begin
+      if Day > Months(Month) or Day < 1 then
+	 raise Day_Error;
+      end if;
+   end Check_Day;
+   
+   procedure Check_Day_Leap(Month : in Integer;
+			    Day : in Integer) is
+   begin
+      if Month = 2 then
+	 if Day > 29 or Day < 1 then 
+	    raise Day_Error;
+	 end if;
+      else
+	 Check_Day(Month, Day);
+      end if;
+   end Check_Day_Leap;
+   
+   procedure Check_Month(Month : in Integer) is			 	 
+   begin
+      if Month < 1 or Month > 12 then
+	 raise Month_Error;
+      end if;
+   end;      
+   
+   
+   procedure Nolla(Item : in Integer) is
+      
+   begin
+      
+      if Item < 10 then
+	 Put(0, Width => 0);
+      end if;
+      
+   end Nolla;
+   
+   --Get Correct String Del 2
+   procedure Get_Correct_String(S : out String) is
+
+      C : Character;
+      
+   begin      
+      loop
+	 Get(C);	 
+	 if C /= ' ' then
+	    S(S'First) := C;
+	    for Count in S'First+1..S'Last loop
+	       if End_Of_Line then
+		  raise Length_Error;
+	       else
+		  Get(S(Count));
+	       end if;
+	    end loop;
+	    exit;
+	 end if;	    
+      end loop;
+      
+   end Get_Correct_String;
+   
+   function Check_Leap(Year : in Integer)
+		      return Boolean is	 	 
+   begin
+      if Year mod 4 = 0 then
+	 if Year mod 100 = 0 then
+	    if Year mod 400 = 0 then
+	       return True;
+	    else
+	       return False;
+	    end if;
+	 End if;
+	 return True;
+      else 
+	 return False;
+      end if;
+   end Check_Leap;
+   
+   procedure Get(Item : out Date_Type) is
+      
+      function Check_Date(S : in String)
+			 return Boolean is
+	 
+	 Year : Integer := Integer'Value(S(1..4));
+	 Month : Integer := Integer'Value(S(6..7));
+	 Day : Integer := Integer'Value(S(9..10));
+      begin
+	 Check_Year(Year);
+	 Check_Month(Month);
+	 if Check_Leap(Year) then 
+	    Check_Day_Leap(Month, Day);
+	 else
+	    Check_Day(Month, Day);
+	 end if;
+	 
+	 return True;
+	 
+      end Check_Date;
+
+      --Procedure Get för Date_Type        
+      S : String(1..10);
+      I : Integer := 0;
+   begin
+      
+      Get_Correct_String(S);
+      for Count in S'Range loop
+	 if Count = 5 or Count = 8 then
+	    if S(Count) /= '-' then
+	       raise Format_Error;
+	    end if;
+	 else
+	    if S(Count) not in '0'..'9' then
+	       raise Format_Error;
+	    end if;
+	 end if;
+
+      end loop;
+      
+      if Check_Date(S) then
+	 Item.Year := Integer'Value(S(1..4));
+	 Item.Month := Integer'Value(S(6..7));
+	 Item.Day := Integer'Value(S(9..10));
+      end if;
+      
+   exception
+      when Length_Error =>
+	 raise Format_Error; 
+	 
+   end Get;
+   
+   --PUT DATE_TYPE
+   procedure Put(Item : in Date_Type) is
+   begin
+      Put(Item.Year, Width => 0);
+      Put("-");
+      Nolla(Item.Month);
+      Put(Item.Month, Width => 0);
+      Put("-");
+      Nolla(Item.Day);
+      Put(Item.Day, Width => 0);
+      
+   end Put;
+   
+   --- EFTER O4
+   
+   --Returnar true om det är 30 dagar i månaden
+   function Check_Month_Days30(Item : in Date_Type) return Boolean is
+   begin
+      if Item.Month = 4 or Item.Month = 6 or Item.Month = 9 or Item.Month = 11 then 
+	 return True;
+      else
+	 return False;
+      end if;
+      
+   end Check_Month_Days30;
+   
+   procedure Back_Day_February(Item : in out Date_Type) is
+   begin
+      
+      Item.Month := 2;
+      if Check_Leap(Item.Year) then
+	 Item.Day := 29;
+      else
+	 Item.Day := Months(Item.Month);
+      end if;
+      
+   end Back_Day_February;
+   
+   procedure Back_Day(Item : in out Date_Type) is
+   begin
+      
+      if Item.Month = 1 then
+	 Item.Month := 12;
+	 Item.Day := Months(Item.Month);
+	 Item.Year := Item.Year - 1;
+      elsif Item.Month = 3 then
+	 Back_Day_February(Item);
+      else	 
+	 Item.Month := Item.Month - 1;
+	 Item.Day := Months(Item.Month);
+      end if;
+      
+
+      
+   end Back_Day;
+   
+   procedure New_Month(Item : in out Date_Type) is
+      
+   begin
+      
+      if Item.Day = 1 then
+	 Back_Day(Item);
+      else	    
+	 Item.Day := 1;
+	 if Item.Month /= 12 then	    
+	    Item.Month := Item.Month + 1;
+	 else 
+	    Item.Month := 1; 
+	    Item.Year := Item.Year + 1;
+	 end if;
+      end if;
+      
+   end New_Month;
+   
+   function Next_Date(Item : in Date_Type) return Date_Type is
+      
+      procedure Februari_Leap(Item : in out Date_Type) is
+	 
+      begin
+	 
+	 if Item.Day = 29 then
+	    New_Month(Item);
+	 elsif Item.Day = Months(Item.Month) then	       
+	    Item.Day := Item.Day + 1;
+	 end if;
+      end Februari_Leap;
+      
+      --Plussar en dag om det inte är skottår kallas denna
+      procedure Month_Non_Leap(Item : in out Date_Type) is
+	 --Month_Non_Leap
+      begin
+	 if Item.Year = 9000 and Item.Day = 31 and Item.Month = 12 then
+	    raise Year_Error;
+	 end if;	 
+	 if Item.Day = Months(Item.Month) then
+	    New_Month(Item);
+	 else
+	    Item.Day := Item.Day + 1;
+	 end if;          	 
+      end Month_Non_Leap;
+      
+      Date : Date_Type := Item;
+      --Next_Date Begin
+   begin
+      
+      if Check_Leap(Date.Year) then
+	 if Date.Month = 2 then
+	    Februari_Leap(Date);
+	 end if;
+      else 
+	 Month_Non_Leap(Date);
+      end if;
+      
+      return Date; 
+      
+   end Next_Date;  
+   
+   function Previous_Date(Item : in Date_Type) return Date_Type is
+      Date : Date_Type := Item;
+   begin
+      if Date.Year = 1532 and Date.Month = 1 and Date.Day = 1 then
+	 raise Year_Error;
+      end if;
+      
+      if Date.Day = 1 then	 
+	 New_Month(Date);
+      else 
+	 Date.Day := Date.Day - 1;
+      end if;
+      
+      return Date;      
+   end Previous_Date;
+   
+   
+   
+   function "<"(Left : in Date_Type; Right : in Date_Type) return Boolean is
+      
+   begin
+      if Left.Year < Right.Year then
+	 return True;
+      elsif Left.Year = Right.Year then	 
+	 if Left.Month < Right.Month then
+	    return True;
+	 elsif Left.Month = Right.Month then
+	    if Left.Day < Right.Day then
+	       return True;	  
+	    else
+	       return False;
+	    end if;
+	 else
+	    return False;
+	 end if;
+      else
+	 return False;
+      end if;      
+   end "<";   
+
+   function ">"(Left : in Date_Type; Right : in Date_Type) return Boolean is
+      
+   begin
+      
+      if Left.Year > Right.Year then
+	 return True;
+      elsif Left.Year = Right.Year then	 
+	 if Left.Month > Right.Month then
+	    return True;
+	 elsif Left.Month = Right.Month then
+	    if Left.Day > Right.Day then
+	       return True;	  
+	    else
+	       return False;
+	    end if;
+	 else
+	    return False;
+	 end if;
+      else
+	 return False;
+      end if;  
+   end ">";
+   
+   function "="(Left : in Date_Type; Right : in Date_Type) return Boolean is
+      
+   begin
+      
+      if Left.Year = Right.Year and Left.Month = Right.Month and Left.Day = Right.Day then
+	 return True;
+      else
+	 return False;
+      end if;      
+   end "=";
+   
+end Test_Package;

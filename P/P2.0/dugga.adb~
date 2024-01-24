@@ -1,0 +1,36 @@
+with Ada.Text_IO; use Ada.Text_IO;
+with Ada.Integer_Text_IO; use Ada.Integer_Text_IO;
+with Ada.Float_Text_IO; use Ada.Float_Text_IO;
+
+procedure Dugga is
+   
+   --FUNKTION
+   function UP1 (F : in Float)
+      return Float is
+      
+      F2 : Float;
+      
+   begin
+      F2 := F*32.7;
+      F2 := Float'Ceiling(F2);
+      return F2;
+   end UP1;
+
+   F : Float;
+   
+begin
+   --UPPGIFT 1
+   Put("Mata in ett flyttal: ");
+   Get(F);
+   Put("Produkten av ");
+   Put(F);
+   Put(" och 32.7 blir");
+   Put(UP1(F));
+   
+   --UPPGIFT 2
+
+    
+   --UPPGIFT 3
+
+   
+end Dugga;

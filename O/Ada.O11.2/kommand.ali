@@ -1,0 +1,91 @@
+V "GNAT Lib v10"
+M P W=b
+P SS ZX
+
+RN
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTIONS
+RV NO_IO
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV SPARK_05
+
+U kommand%b		kommand.adb		1b2272ab NE OO SU
+W ada%s			ada.ads			ada.ali
+W ada.command_line%s	a-comlin.adb		a-comlin.ali
+Z ada.exceptions%s	a-except.adb		a-except.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+Z system%s		system.ads		system.ali
+Z system.concat_3%s	s-conca3.adb		s-conca3.ali
+Z system.exception_table%s  s-exctab.adb	s-exctab.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+Z system.standard_library%s  s-stalib.adb	s-stalib.ali
+Z system.val_int%s	s-valint.adb		s-valint.ali
+
+D ada.ads		20230707070819 76789da1 ada%s
+D a-comlin.ads		20230707070819 4aa66568 ada.command_line%s
+D a-except.ads		20230707070819 a7106115 ada.exceptions%s
+D a-inteio.ads		20230707070819 f64b89a4 ada.integer_text_io%s
+D a-ioexce.ads		20230707070819 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20230707070819 119b8fb3 ada.streams%s
+D a-tags.ads		20230707070819 491b781d ada.tags%s
+D a-textio.ads		20230707070819 aef4d56d ada.text_io%s
+D a-tiinio.ads		20230707070819 390edddb ada.text_io.integer_io%s
+D a-unccon.ads		20230707070819 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20230707070819 5ab55268 interfaces%s
+D i-cstrea.ads		20230707070819 e53d8b8e interfaces.c_streams%s
+D kommand.adb		20231024130330 093b4b0a kommand%b
+D system.ads		20230707070819 4635ec04 system%s
+D s-conca3.ads		20230707070819 0b705ca5 system.concat_3%s
+D s-crtl.ads		20230707070819 0ebbdb71 system.crtl%s
+D s-exctab.ads		20230707070819 54135002 system.exception_table%s
+D s-ficobl.ads		20230707070819 078245e4 system.file_control_block%s
+D s-parame.ads		20230707070819 48ec542b system.parameters%s
+D s-secsta.ads		20230707070819 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20230707070819 a7318a92 system.soft_links%s
+D s-stache.ads		20230707070819 a37c21ec system.stack_checking%s
+D s-stalib.ads		20230707070819 09bd3940 system.standard_library%s
+D s-stoele.ads		20230707070819 2dc34a04 system.storage_elements%s
+D s-traent.ads		20230707070819 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20230707070819 34867c83 system.unsigned_types%s
+D s-valint.ads		20230707070819 b5ff6963 system.val_int%s
+D s-wchcon.ads		20230707070819 1b7d22d2 system.wch_con%s
+G a e
+G c Z b b [kommand standard 5 11 none]
+X 1 ada.ads
+16K9*Ada 20e8 13|2r6 2r29 2r47 3r5 3r27 3r44
+X 2 a-comlin.ads
+36K13*Command_Line 144e21 13|2w10 3r9
+39V13*Argument_Count{natural} 13|48s7 51s10
+52V13*Argument{string} 13|40s14 42s16 49s12 49s25 49s38 50s12 50s25 50s38
+. 63s37
+62V13*Command_Name{string} 13|23s17 23s46 25s20 25s49 43s29 59s37 61s36
+X 4 a-inteio.ads
+18K13*Integer_Text_IO[9|46] 13|2w51 3r48
+X 8 a-textio.ads
+57K13*Text_IO 727e16 13|2w33 3r31
+465U14*Put 13|37s7 40s10 43s7 52s7 54s7 59s7 61s7 63s7
+508U14*Put_Line 13|42s7
+X 13 kommand.adb
+5U11*Kommand 5b11 65l5 65t12
+7X4 Output_Error 26r16 58r9
+8X4 Input_Error 24r16 60r9
+9X4 Input_Output_Error 28r16 62r9
+11V13 Punkt1{boolean} 11b13 11>20 11>27 17l8 17t14 23s33 25s36 27s28
+11a20 Item1{string} 15r14 15r20 15r35 15r118 15r124 15r137
+11a27 Item2{string} 15r49 15r55 15r68 15r83 15r89 15r104
+20U14 Upg2 20b14 20>19 20>25 20>31 31l8 31t12 49s7
+20a19 Arg1{string} 23r10 23r40 27r13 27r35
+20a25 Arg2{string} 25r13 25r43 27r20 27r41
+20a31 Arg3{string}
+34U14 Upg1 34b14 34>19 34>25 34>31 44l8 44t12 50s7
+34a19 Arg1{string}
+34a25 Arg2{string}
+34a31 Arg3{string} 38r37
+38i11 Count{integer}
+

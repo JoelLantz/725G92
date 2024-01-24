@@ -1,0 +1,66 @@
+with Ada.Text_IO; use Ada.Text_IO;
+with Ada.Integer_Text_IO; use Ada.Integer_Text_IO;
+with Ada.Float_Text_IO; use Ada.Float_Text_IO;
+
+procedure Dugga is
+   
+      
+   --Funktion
+   function UP1(S : in String)
+	    return Float is
+      
+   begin
+      return Float'Rounding(Float'Value(S)*Float'Value(S));
+   end UP1;
+   
+   --Procedur
+   procedure UP2(F1 : in Float ;
+		 F2 : out Float) is
+      
+   begin
+      F2 := (F1/32.7);
+      F2 := Float'Ceiling(F2);
+   end UP2;
+   
+   --Operator
+   function "-"(Left : in Character ;
+		Right : in String) 
+	       return Integer is
+      
+   begin
+      return Integer(Float'Floor(Float(Character'Pos(Left)-Character'Pos('0')) - Float'Value(Right)));
+   end "-";
+   
+   F : Float;
+   S : String(1..3);
+   C : Character;
+   
+begin
+   --UPPGIFT 1
+   Put("Mata in längden: ");
+   Get(S);
+   Put("Den beräknade arean blev: ");
+   Put(UP1(S), Fore => 0, Aft => 1, Exp => 0);
+   Skip_Line;
+   New_Line(2);
+   
+   --UPPGIFT 2
+   Put("Mata in ett flyttal: ");
+   Get(F);
+   Put("kvoten mellan ");
+   Put(F, Fore => 0, Aft => 1, Exp => 0);
+   Put(" och 32.7 blir ");
+   UP2(F, F);
+   Put(F, Fore => 0, Aft => 1, Exp => 0);
+   Skip_Line;
+   New_Line(2);
+   
+   --UPPGIFT 3
+   Put("Mata in ett tecken: ");
+   Get(C);
+   Put("Mata in en sträng: ");
+   Get(S);
+   Put("Den beräknade differensen mellan " & C & " och " & S & " blir ");
+   Put(C-S, Width => 0);
+   Skip_Line;  
+end Dugga;

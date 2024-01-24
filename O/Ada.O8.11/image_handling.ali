@@ -1,0 +1,150 @@
+V "GNAT Lib v10"
+P ZX
+
+RN
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_IO
+RV NO_DEFAULT_INITIALIZATION
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLICIT_LOOPS
+RV SPARK_05
+
+U image_handling%b	image_handling.adb	40a8c826 NE OO PK
+W ada%s			ada.ads			ada.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+
+U image_handling%s	image_handling.ads	f28e7218 EE NE OO PK
+W ada%s			ada.ads			ada.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+
+D ada.ads		20230707070819 76789da1 ada%s
+D a-except.ads		20230707070819 a7106115 ada.exceptions%s
+D a-inteio.ads		20230707070819 f64b89a4 ada.integer_text_io%s
+D a-ioexce.ads		20230707070819 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20230707070819 119b8fb3 ada.streams%s
+D a-tags.ads		20230707070819 491b781d ada.tags%s
+D a-textio.ads		20230707070819 aef4d56d ada.text_io%s
+D a-tiinio.ads		20230707070819 390edddb ada.text_io.integer_io%s
+D a-unccon.ads		20230707070819 0e9b276f ada.unchecked_conversion%s
+D image_handling.ads	20231204112710 5c7aa775 image_handling%s
+D image_handling.adb	20231204112521 446d339a image_handling%b
+D interfac.ads		20230707070819 5ab55268 interfaces%s
+D i-cstrea.ads		20230707070819 e53d8b8e interfaces.c_streams%s
+D system.ads		20230707070819 4635ec04 system%s
+D s-crtl.ads		20230707070819 0ebbdb71 system.crtl%s
+D s-exctab.ads		20230707070819 54135002 system.exception_table%s
+D s-ficobl.ads		20230707070819 078245e4 system.file_control_block%s
+D s-parame.ads		20230707070819 48ec542b system.parameters%s
+D s-secsta.ads		20230707070819 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20230707070819 a7318a92 system.soft_links%s
+D s-stache.ads		20230707070819 a37c21ec system.stack_checking%s
+D s-stalib.ads		20230707070819 09bd3940 system.standard_library%s
+D s-stoele.ads		20230707070819 2dc34a04 system.storage_elements%s
+D s-traent.ads		20230707070819 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20230707070819 34867c83 system.unsigned_types%s
+D s-wchcon.ads		20230707070819 1b7d22d2 system.wch_con%s
+G a e
+G c Z s b [print_image_information image_handling 6 14 none]
+G c Z s b [print_image_information image_handling 7 14 none]
+G c Z s b [read image_handling 9 14 none]
+G c Z s s [pixel_typeIP image_handling 14 9 none]
+G c Z s s [Timage_area_typeBIP image_handling 21 4 none]
+G c Z s s [image_typeIP image_handling 24 9 none]
+G c Z b b [spacing image_handling 8 14 none]
+G c Z b b [put image_handling 22 14 none]
+G c Z b b [put image_handling 41 14 none]
+G c Z b b [is_pbma image_handling 73 13 none]
+G c Z b b [assign_color image_handling 86 14 none]
+G c Z b b [get_pbm image_handling 105 14 none]
+G c Z b b [get_pbma image_handling 120 14 none]
+G c Z b b [check_pixel_count image_handling 139 14 none]
+X 1 ada.ads
+16K9*Ada 20e8 10|1r6 1r23 11|1r6 1r31 2r6 2r32
+X 3 a-inteio.ads
+18K13*Integer_Text_IO[8|46] 11|1w10 1r35
+X 7 a-textio.ads
+57K13*Text_IO 727e16 10|1w10 1r27 11|2w10 2r36
+64P9*File_Type 10|7r48 11|8r32 22r29 41r28 64r48 73r31 86r46 105r32 120r33
+. 139r42 163r14
+66n23*In_File{66E9} 11|166r18
+86I12*Field{integer}
+114U14*Open 11|166s7
+129U14*Close 11|168s7
+178V13*Standard_Output{64P9} 11|59s31
+258U14*New_Line 11|49s10
+270U14*Skip_Line 11|146s7 147s7
+279V13*End_Of_Line{boolean} 11|77s17
+378U14*Get 11|78s10 113s13 128s13 129s13
+459U14*Put 11|12s7 14s10 16s10 34s10 36s10
+X 8 a-tiinio.ads
+51U14*Get 11|148s7[3|18] 149s7[3|18]
+68U14*Put 11|28s7[3|18] 30s7[3|18] 32s7[3|18]
+71i7 Width{7|86I12} 11|28r26[3|18] 30r26[3|18] 32r26[3|18]
+X 10 image_handling.ads
+2K9*Image_Handling 14E9 31l5 31e19 11|4b14 171l5 171t19
+4R10*Image_Type 6r48 8r48 10r33 24c9 29e17 11|42r28 55r48 65r48 87r50 106r36
+. 121r37 140r46 162r33
+6U14*Print_Image_Information 6>38 11|55b14 61l8 61t31
+6r38 Item{4R10} 11|55b38 59r48
+7U14*Print_Image_Information 7>38 8>38 11|59s7 64b14 70l8 70t31
+7p38 File{7|64P9} 11|64b38 68r11
+8r38 Item{4R10} 11|65b38 68r17
+9U14*Read 9>19 10=19 11|161b14 169l8 169t12
+9a19 File_Name{string} 11|161b19 166r27
+10r19 Item{4R10} 11|162b19 167m31
+14R9 Pixel_Type 20e17 22r28 11|23r29
+16i10*R{integer} 11|27r27 28r23 93m41 97m41
+17i10*G{integer} 11|29r27 30r23 94m41 98m41
+18i10*B{integer} 11|31r27 32r23 95m41 99m41
+19b10*Alpha{boolean} 11|33r16 132m47
+21A9 Image_Area_Type(14R9)<integer><integer> 28r23
+26i10*X_Dim{integer} 11|45r24 112r32 127r32 150m12
+27i10*Y_Dim{integer} 11|46r27 110r28 125r28 151m12
+28a10*Image_Area{21A9} 11|47r28 93m15 94m15 95m15 97m15 98m15 99m15 132m21
+X 11 image_handling.adb
+8U14 Spacing 8b14 8>22 9>22 19l8 19t15 27s7 29s7 31s7
+8p22 File{7|64P9} 12r11 14r14 16r14
+9i22 Item{integer} 13r10 13r25 15r13
+22U14 Put 22b14 22>18 23>18 39l8 39t11 47s13
+22p18 File{7|64P9} 27r15 28r11 29r15 30r11 31r15 32r11 34r14 36r14
+23r18 Pixel{10|14R9} 27r21 28r17 29r21 30r17 31r21 32r17 33r10
+41U14 Put 41b14 41>18 42>18 52l8 52t11 68s7
+41p18 File{7|64P9} 47r17 49r19
+42r18 Item{10|4R10} 45r19 46r22 47r23
+45i11 I{integer} 47r39
+46i14 K{integer} 47r42
+73V13 Is_Pbma{boolean} 73b13 73>21 83l8 83t15 144s15
+73p21 File{7|64P9} 77r29 78r14
+74e7 C{character} 78m20 81r14
+86U14 Assign_Color 86b14 86>27 87=27 88>27 89>27 89>34 102l8 102t20 114s13
+. 130s13
+86p27 File{7|64P9}
+87r27 Item{10|4R10} 93m10 94m10 95m10 97m10 98m10 99m10
+88e27 C{character} 92r10 96r13
+89i27 Count{integer} 93r26 94r26 95r26 97r26 98r26 99r26
+89i34 Count2{integer} 93r33 94r33 95r33 97r33 98r33 99r33
+105U14 Get_Pbm 105b14 105>22 106=22 118l8 118t15 155s10
+105p22 File{7|64P9} 113r17 114r26
+106r22 Item{10|4R10} 110r23 112r27 114m32
+107e7 C{character} 113m23 114r38
+110i11 Count{integer} 114r41
+112i14 Count2{integer} 114r48
+120U14 Get_Pbma 120b14 120>23 121=23 137l8 137t16 153s10
+120p23 File{7|64P9} 128r17 129r17 130r26
+121r23 Item{10|4R10} 125r23 127r27 130m32 132m16
+122e7 C{character} 128m23 130r38
+122e10 Transp{character} 129m23 131r16
+125i11 Count{integer} 130r41 132r32
+127i14 Count2{integer} 130r48 132r39
+139U14 Check_Pixel_Count 139b14 139>32 140=32 141<32 141<35 158l8 158t25
+. 167s7
+139p32 File{7|64P9} 144r23 146r17 147r17 148r11 149r11 153r19 155r18
+140r32 Item{10|4R10} 150m7 151m7 153m25 155m24
+141i32 X{integer} 148m17 150r21
+141i35 Y{integer} 149m17 151r21
+142b7 Temp{boolean} 144m7 152r10
+163p7 File{7|64P9} 166m12 166r12 167r25 168m13 168r13
+164i7 X{integer} 167m37
+164i10 Y{integer} 167m40
+
